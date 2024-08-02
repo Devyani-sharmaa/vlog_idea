@@ -1,0 +1,43 @@
+{% extends "basefile.html" %}
+
+
+
+{% block xyz%}
+    
+<div style="margin-left: 22%; margin-right: 22%;">
+  <div style="text-align: center; padding: 20px;">
+
+
+<div>
+  <h1 style="  color: red;
+  background: black;">contact us</h1>
+<form action="/cartoon/savedata" method="post" >
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+    <input type="text" placeholder="Enter your name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="fname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your email address" name="email">
+  </div>
+  <div class="mb-3 form-check">
+      <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your phone number" name="phn">
+
+  </div>
+
+  <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Message</label>
+          <textarea type="number"  class="form-control" id="exampleInputPassword1" placeholder="Enter your Message here" rows="5" name="msg"></textarea>
+    </div>
+    
+
+  </div>
+
+    <div style="text-align: center;">
+  <button type="submit" class="btn btn-primary">Submit</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+
+  {% endblock xyz %}
